@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 7, 2014 3:58:20 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.domain.RentalCar" table="RENTALCAR">
+	<cache usage="read-write"/>
+		<id name="carId" type="java.lang.Integer">
+			<column name="CARID" />
+			<generator class="increment" />
+		</id>
+		<property name="carName" type="java.lang.String">
+			<column name="CARNAME" />
+		</property>
+		<list name="owners" table="car_owner" inverse="true" lazy="true" fetch="select" >
+		<cache usage="read-write"/>
+			<key>
+				<column name="CARID" not-null="true" />
+			</key>
+			<list-index column="idx" ></list-index>
+			<many-to-many class="com.domain.Owner">
+				<column name="OWNERID" not-null="true" />
+			</many-to-many>
+		</list>		
+	</class>
+	
+	<query name="GetOwners" cacheable="true" >
+		select r.owners from RentalCar r where  r.carId=?
+	</query>
+</hibernate-mapping>

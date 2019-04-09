@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-catalog="hibernate" match-name="address"/>
+  <table-filter match-catalog="hibernate" match-name="byke"/>
+  <table-filter match-catalog="hibernate" match-name="car"/>
+  <table-filter match-catalog="hibernate" match-name="emm_user"/>
+  <table-filter match-catalog="hibernate" match-name="emm_user_id"/>
+  <table-filter match-catalog="hibernate" match-name="employee"/>
+  <table-filter match-catalog="hibernate" match-name="employeedetail"/>
+  <table-filter match-catalog="hibernate" match-name="filemodel"/>
+  <table-filter match-catalog="hibernate" match-name="hibernate_sequences"/>
+  <table-filter match-catalog="hibernate" match-name="roleitems"/>
+  <table-filter match-catalog="hibernate" match-name="user_"/>
+  <table-filter match-catalog="hibernate" match-name="user_model"/>
+  <table-filter match-catalog="hibernate" match-name="userid"/>
+  <table-filter match-catalog="hibernate" match-name="vehicle"/>
+</hibernate-reverse-engineering>
